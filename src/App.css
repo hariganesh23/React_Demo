@@ -1,0 +1,53 @@
+.app-container {
+  font-family: Arial, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.employee-list {
+  margin-top: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  background: #fff;
+  overflow: hidden;
+  height: auto;
+}
+
+.no-results {
+  padding: 0.5rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.demo-btn-container {
+  padding: 0.5rem;
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+}
+
+.demo-btn {
+  background: #3b82f6;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.demo-btn:hover {
+  background: #2563eb;
+}
+
+.search-button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}

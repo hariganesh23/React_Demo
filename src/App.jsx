@@ -1,31 +1,68 @@
 import React, { useState } from "react";
-import SearchBar from "./components/SearchBar";
-import FruitList from "./components/FruitList";
-// import { useSelector, useDispatch } from "react-redux";
-// import { increment, decrement } from "./reduxStore/counterStore";
-
-
-const items = ["Apple", "Banana", "Orange", "Mango", "Grapes", "Pineapple"];
+import EmployeeSearch from "./components/EmployeeSearch";
+import { useNavigate } from "react-router-dom";
+import Notification from "./components/Notification";
+import "./App.css"; // Import the CSS file
+import Button from "@mui/material/Button";
+import employeeData from "./inputData/employeeDetails.json"; // Assuming you have a JSON file with employee data
+import CustomPaginationActionsTable from "./components/CustomPaginationActionsTable";
 
 const App = () => {
-  // const count = useSelector((state) => state.counter.value);
-  // const dispatch = useDispatch();
-  const [searched, setSearched] = useState(false);
+  const navigate = useNavigate();
+  const [filteredEmployees, setFilteredEmployees] = useState("");
+  const [notification, setNotification] = useState(false);
+  const [severity, setSeverity] = useState("");
+  const [notificationMessage, setNotificationMessage] = useState("");
+
+  const handleSearch = (query) => {
+    if (!query) {
+      console.log("No query provided");
+      setSeverity("error");
+      setNotificationMessage("Search query cannot be empty");
+      setNotification(true);
+      setFilteredEmployees("");
+      return;
+    }
+    const lowerQuery = query.toLowerCase();
+    const results = employeeData.employeeData.filter(
+      (emp) =>
+        emp.empId.toLowerCase().includes(lowerQuery) ||
+        emp.name.toLowerCase().includes(lowerQuery)
+    );
+    setFilteredEmployees(results);
+    if (results.length === 0) {
+      setSeverity("error");
+      setNotificationMessage("No results found");
+      setNotification(results.length === 0);
+    } else {
+      setSeverity("success");
+      setNotificationMessage("Found " + results.length + " results");
+      setNotification(true);
+    }
+  };
 
   return (
-    <div className="App">
-      <h1 className="text-center text-2xl font-bold">Fruit Search</h1>
-      <SearchBar items={items}
-      setSearched={setSearched} />
-       {console.log("searched -- ", searched)}
-      {searched ? <FruitList items={items} /> 
-      : <div className="text-center text-gray-500">Please search for fruits</div> }
-{/* 
-    <div>
-      <h1>Counter: {count}</h1>
-      <button onClick={() => dispatch(increment())}>+1</button>
-      <button onClick={() => dispatch(decrement())}>-1</button>
-    </div> */}
+    <div className="app-container">
+      {notification && (
+        <Notification
+          severity={severity}
+          notificationMessage={notificationMessage}
+        />
+      )}
+      <h1 className="heading">Employee Search</h1>
+      <div className="search-button-container">
+        <EmployeeSearch employee={employeeData} onSearch={handleSearch} />
+
+        <div className="demo-btn-container">
+          <Button variant="contained" onClick={() => navigate("/demo")}>
+            Other Demo
+          </Button>
+        </div>
+      </div>
+
+      {filteredEmployees.length > 0 && (
+        <CustomPaginationActionsTable employee={filteredEmployees} />
+      )}
     </div>
   );
 };

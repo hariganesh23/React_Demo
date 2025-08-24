@@ -1,0 +1,111 @@
+ {
+  "employeeData": [
+    { "name": "John Doe", "empId": "E001", "age": 30, "position": "Software Engineer", "rewardsPointsActivity": {
+      "workAnniversary": 500,
+      "projectCompletion": 300, 
+      "peerRecognition": 200,
+      "totalPoints": 1000
+    } ,
+  "employeeChecklist": {
+      "onboarding": true,
+      "trainingCompleted": true,
+      "performanceReview": false,
+      "benefitsEnrolled": true
+    } },
+    { "name": "Jane Smith", "empId": "E002", "age": 25, "position": "Product Manager" , "rewardsPointsActivity": {
+      "workAnniversary": 600,
+      "projectCompletion": 200, 
+      "peerRecognition": 200,
+      "totalPoints": 1000
+    },
+  "employeeChecklist": {
+      "onboarding": false,
+      "trainingCompleted": true,
+      "performanceReview": false,
+      "benefitsEnrolled": true
+    } },
+    { "name": "Sam Johnson", "empId": "E003", "age": 35, "position": "Designer" , "rewardsPointsActivity": {
+      "workAnniversary": 500,
+      "projectCompletion": 400, 
+      "peerRecognition": 200,
+      "totalPoints": 1100
+    } ,
+  "employeeChecklist": {
+      "onboarding": true,
+      "trainingCompleted": false,
+      "performanceReview": false,
+      "benefitsEnrolled": true
+    }},
+    {
+      "name": "John Brown",
+      "empId": "E004",
+      "age": 28,
+      "position": "Software Engineer"
+, "rewardsPointsActivity": {
+      "workAnniversary": 200,
+      "projectCompletion": 200, 
+      "peerRecognition": 200,
+      "totalPoints": 800
+    } ,
+  "employeeChecklist": {
+      "onboarding": false,
+      "trainingCompleted": true,
+      "performanceReview": false,
+      "benefitsEnrolled": true
+    }    },
+    {
+      "name": "John White",
+      "empId": "E005",
+      "age": 32,
+      "position": "Software Engineer", "rewardsPointsActivity": {
+      "workAnniversary": 100 ,
+      "projectCompletion": 250, 
+      "proposalActivities": 250,
+      "peerRecognition": 260,
+      "totalPoints": 610
+    } ,
+  "employeeChecklist": {
+      "onboarding": true,
+      "trainingCompleted": true,
+      "performanceReview": false,
+      "benefitsEnrolled": false
+    }
+    },
+    { "name": "John Black", "empId": "E006", "age": 29, "position": "QA Engineer", "rewardsPointsActivity": {
+      "workAnniversary": 500,
+      "projectCompletion": 300, 
+      "peerRecognition": 200,
+      "totalPoints": 1000
+    } ,
+  "employeeChecklist": {
+      "onboarding": true,
+      "trainingCompleted": true,
+      "performanceReview": false,
+      "benefitsEnrolled": true
+    }},
+    { "name": "John Green", "empId": "E007", "age": 31, "position": "DevOps Engineer", "rewardsPointsActivity": {
+      "workAnniversary": 500,
+      "projectCompletion": 300, 
+      "peerRecognition": 200,
+      "totalPoints": 1000
+    } },
+    { "name": "John Blue", "empId": "E008", "age": 27, "position": "Data Scientist", "rewardsPointsActivity": {
+      "workAnniversary": 500,
+      "projectCompletion": 300, 
+      "peerRecognition": 200,
+      "totalPoints": 1000
+    } },
+    { "name": "John Yellow", "empId": "E009", "age": 33, "position": "System Analyst", "rewardsPointsActivity": {
+      "workAnniversary": 500,
+      "projectCompletion": 300, 
+      "peerRecognition": 200,
+      "totalPoints": 1000
+    } },
+    { "name": "John Purple", "empId": "E010", "age": 26, "position": "Network Engineer", "rewardsPointsActivity": {
+      "workAnniversary": 500,
+      "projectCompletion": 300, 
+      "peerRecognition": 200,
+      "totalPoints": 1000
+    } }
+  ]
+}
