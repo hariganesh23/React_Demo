@@ -1,5 +1,7 @@
 .app-container {
   font-family: Arial, sans-serif;
+  padding: 1rem;
+  background-color: #c1e9f1;
 }
 
 .heading {

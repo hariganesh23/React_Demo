@@ -5,13 +5,12 @@ export function checkPalindrome(str) {
 }
 
 export function checkFibonacci(str) {
-  console.log("checkFibonacci - ", str);
   const cleanedFib = str.replace(/[, ]/g, "")
-let isFib =false;
-for (let i = 0; i < cleanedFib.length; i++) {
-    if (cleanedFib[i] === cleanedFib[i+1]) {
-     isFib = true;
+  let isFib = false;
+  for (let i = 0; i < cleanedFib.length; i++) {
+    if (cleanedFib[i] === cleanedFib[i + 1]) {
+      isFib = true;
     }
-}
-  return isFib; 
+  }
+  return isFib;
 }
